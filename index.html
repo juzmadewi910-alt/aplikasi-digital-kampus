@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Digital Kampus | Dashboard Mahasiswa</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><span class="brand-mark">DK</span><div><strong>Digital Kampus</strong><small>Portal layanan akademik</small></div></div>
+    <div class="user">Mahasiswa · Sanusi</div>
+  </header>
+  <main class="container">
+    <section class="welcome">
+      <div><p class="eyebrow">PORTAL AKADEMIK</p><h1>Selamat datang!</h1><p>Kelola kebutuhan akademikmu dalam satu tempat.</p></div>
+      <div class="semester">Semester Ganjil 2026/2027</div>
+    </section>
+    <section class="stats">
+      <article class="stat"><span>SKS diambil</span><strong id="totalSks">0</strong><small>Semester ini</small></article>
+      <article class="stat"><span>Mata kuliah</span><strong id="totalMk">0</strong><small>Dalam KRS</small></article>
+      <article class="stat"><span>Status UKT</span><strong class="status">Contoh</strong><small>Data simulasi</small></article>
+    </section>
+    <section class="panel">
+      <div class="section-heading"><div><p class="eyebrow">LAYANAN AKADEMIK</p><h2>Pengisian KRS</h2></div><span class="tag">Demo</span></div>
+      <form id="krsForm" class="form-grid">
+        <label>Nama mata kuliah
+          <select id="course" required>
+            <option value="">Pilih mata kuliah</option>
+            <option value="Pemrograman Web|3">Pemrograman Web — 3 SKS</option>
+            <option value="Basis Data|3">Basis Data — 3 SKS</option>
+            <option value="Struktur Data|3">Struktur Data — 3 SKS</option>
+            <option value="Jaringan Komputer|2">Jaringan Komputer — 2 SKS</option>
+            <option value="Etika Profesi|2">Etika Profesi — 2 SKS</option>
+          </select>
+        </label>
+        <label>Kelas
+          <select id="className"><option>Reguler A</option><option>Reguler B</option></select>
+        </label>
+        <button type="submit">+ Tambah ke KRS</button>
+      </form>
+      <div class="table-wrap"><table><thead><tr><th>No.</th><th>Mata kuliah</th><th>Kelas</th><th>SKS</th><th>Aksi</th></tr></thead><tbody id="krsRows"><tr><td colspan="5" class="empty">Belum ada mata kuliah yang dipilih.</td></tr></tbody></table></div>
+      <p id="message" class="message" aria-live="polite"></p>
+    </section>
+    <section class="two-columns">
+      <article class="panel"><p class="eyebrow">INFORMASI</p><h2>Pengumuman nilai</h2><p class="muted">Pengumuman nilai UTS akan ditampilkan pada portal akademik setelah dosen menyelesaikan proses penilaian.</p><span class="tag">Contoh informasi</span></article>
+      <article class="panel"><p class="eyebrow">PEMBAYARAN</p><h2>Informasi UKT</h2><p class="muted">Periksa tagihan dan status pembayaran melalui kanal resmi universitas. Halaman ini tidak memproses transaksi.</p><span class="tag">Data simulasi</span></article>
+    </section>
+    <footer>© 2026 Digital Kampus · Proyek simulasi UTS DevOps</footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
